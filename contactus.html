@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact us</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+<style>
+  
+  
+  
+  
+  
+ *{
+  margin-top: 10px; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+  
+ .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; 
+   border: 2px solid black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+ 
+  
+  
+  
+  
+  
+  .contact{
+  position: relative; 
+  min-height: 100vh; 
+  padding: 50px 100px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  background: url(images/wal.jpg); 
+  background-size: cover;
+}
+
+.contact.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2{
+  font-size: 36px; 
+  font-weight: 500;
+  color: #fff;
+} 
+
+.contact .content p {
+  font-weight: 300; 
+  color: #fff;
+}
+
+
+.container{
+  width: 100%; 
+  display: flex; 
+  justify-content:center; 
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+.container .contactInfo{
+  width: 50%;
+  display: flex; 
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0; 
+  display: flex;
+}
+
+
+
+.container .contactInfo .box .icon{
+  min-width: 50px;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+
+
+
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #000000;
+}
+
+
+
+.contactForm{
+  width: 60%; 
+  padding: 30px;
+  background: #fff;
+}
+
+
+.contactForm h2{
+  font-size: 30px; color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+.contactForm .inputBox input, .contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+
+.contactForm .inputBox span{
+  position: absolute;
+  Left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+
+.contactForm .inputBox input:focus ~ span, 
+.contactForm .inputBox input: valid ~ span, 
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translate Y(-20px);
+}
+
+
+.contact Form .inputBox input[type="submit"]{
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+
+form .signup-btn {
+  display: block;
+  width: 100%;
+  background: var(--primary-blue);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+form .signup-btn:hover {
+  background: #2c4893;
+  cursor: pointer;
+}
+
+
+  
+  
+@media (max-width: 991px){
+
+.contact{
+  padding: 50px;
+
+}
+
+.container{
+  flex-direction: column;
+}
+
+.container .contactInfo{
+  margin-bottom: 40px;
+} 
+
+.container .contactInfo, .contactForm{
+  width: 100%;
+}
+  
+} 
+  
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:15px;
+  margin-top: 200px;
+}
+
+  
+ .pic img{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width:50px;
+  border: 2px solid black;
+}
+
+
+ 
+  
+  
+  
+  
+  
+  
+</style>
+</head>
+<body>
+  
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+  <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+  <a href="contactus.html"><ion-icon name="mail"></ion-icon>  ->  Contact us</a>
+ <a href="forgot.html"><ion-icon name="reload-circle"></ion-icon>  ->  Restore password</a>
+</div>
+  
+<span style="font-size:30px; color:steelblue;border-radius:7px; border:3px solid steelblue;
+  cursor:pointer"onclick="openNav()"> ☰
+  </span> <b style="color:steelblue;font-size:20px"> <marquee><center>ONLINE VOTING SYSTEM</center> </b></marquee>
+  
+  <hr style="height:2px;width:100%;background-color:steelblue">
+
+<script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+</script>    
+  
+  
+  
+  
+  
+  
+
+<section class="contact">
+  <div class="pic">
+   <a href="index.html"><img src="vot.jpg"></a>
+</div>
+  
+<div class="content">
+<h2><u>Contact Us</u></h2>
+</div>
+
+<div class="container">
+
+<div class="contactInfo">
+
+<div class="box">
+<div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+<div class="text">
+<h3><b>Office Address</b></h3>
+<p>INDIA <br>Mumbai<br>MAHARASHTRA<br><u>OFFICE :</u><br>B-001, Ratna Enclave<br>uttan road, bhayandar west<br>PIN 401107,</p>
+</div>
+</div>
+  
+  
+<div class="box">
+<div class="icon"><i class="fa fa-mobile"></i></div>
+<div class="text">
+<h3><b>Mobile :</b></h3>
+<p>+91 1234567890</p>
+</div>
+</div> 
+  
+  
+<div class="box">
+<div class="icon"><i class="fa fa-envelope"></i></div>
+<div class="text">
+<h3><b>E-mail us :</b></h3>
+<p>temporary@gmail.com</p>
+</div>
+</div>
+  
+</div>
+  
+  
+<div class="contactForm">
+<form>
+
+<h2>Send Message</h2>
+<div class="inputBox">
+<input type="text" placeholder="Fullname" name="" required="required">
+</div>
+
+<div class="inputBox">
+<input type="text" placeholder="E-mail" name="" required="required">
+</div>
+
+<div class="inputBox">
+<textarea placeholder="Enter your text" required="required"></textarea>
+</div>
+
+
+<button class="signup-btn" type="submit">Send</button>
+
+  
+</form>
+</div>  
+  
+</div>
+</section>
+  
+<footer>
+   Copyright&#169; 2021-2022 Online Voting System.(OVS)<br>
+All Rights Reserved. 
+</footer>   
+  
+  
+ <script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  
+</body>
+</html> 

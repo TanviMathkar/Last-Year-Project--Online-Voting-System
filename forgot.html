@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<title>OVS-Forgot password</title>
+<style>
+
+/* Full-width input fields */
+
+input[type=text]{
+    width: 60%;
+    padding: 30px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+  font-size: 22px;
+    border-radius: 20px;
+}
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #00008b;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin: 8px 0;
+    border-radius:35px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 30px;
+}
+
+/* Center the image and position
+the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.container label{
+  position: absolute;
+ padding-left: 190px;
+  font-size: 25px;
+}
+
+
+
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+
+
+
+body{
+    background-image: url(images/flower.jpg);
+   background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: auto;
+    height:auto;
+}
+
+/* The Close Button (x) */
+
+.menu {
+    position: absolute;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    
+}
+
+.menu:hover,
+.menu:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+.menu2 img{
+    position: absolute;
+    top: 0;
+    right:2px;
+    width: 60px;
+  border: 2px solid black;
+}
+
+
+
+
+/* Add Zoom Animation */ 
+
+/* Change styles for span and cancel
+button on extra small screens */ 
+
+@media screen and(max-width: 300px){
+    span.password {
+       display: block;
+       float: none;
+    }
+}
+
+.ps1{
+  position: relative;
+  left: 140px;
+  top: 75px;
+  font-size: 40px
+}
+
+
+.icons ion-icon{
+   color: black;
+    font-size: 50px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    }
+  
+  .icons ion-icon:hover{
+    color: #48d1cc;
+  }
+
+
+.usr ion-icon{
+    font-size: 150px;
+}
+
+
+
+
+
+
+.icons2 ion-icon{
+   color: black;
+  font-size: 40px;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:15px;    
+}
+
+
+/* menu */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  border: 2px solid black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+@media (max-width: 991px){
+
+
+
+</style>
+
+<body>
+
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+   <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+  <a href="contactus.html"><ion-icon name="home"></ion-icon>  ->  Contact us</a>
+<a href="forgot.html"><ion-icon name="reload-circle"></ion-icon>  ->  Restore password</a>
+
+
+  
+</div>  
+  
+<span style="font-size:30px; color:white;border-radius:7px; border:3px solid white;
+  cursor:pointer"onclick="openNav()">☰ 
+</span> <b style="color:black;font-size:20px">  <marquee><center><h1>ONLINE VOTING SYSTEM</h1></center></b></marquee>
+  <hr style="height:2px;width:100%;background-color:black">
+
+  <script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+    </script>  
+  
+  
+  
+
+<form action="#" method="POST">
+
+<div class="imgcontainer">
+<div class="menu">
+ 
+</div>
+ 
+ <div class="menu2">
+   <a href="index.html"><img src="vot.jpg"></a>
+ </div>  
+
+ <div class="usr">  <ion-icon name="person-circle-outline"></ion-icon></div>
+ <alt="Avatar" class="avatar">
+</div>
+
+
+<div class="container">
+<center><h2>Forgot password</h2></center>
+ <hr style="width:40%"><br><br><br><br>
+<label><b>E-mail</b></label><br>
+  
+  <ion-icon class="ps1" name="mail"></ion-icon>
+  <center><input type="text" placeholder= "Enter E-mail address" name="mobile" required></center><br><br><br>
+ 
+  <center> <button type="submit">RECOVER PASSWORD</button></center><br>
+<br><br><br>
+  
+  
+  
+  <center><p style="font-size:25px">New user ! Register here </p><div class="icons2"><a href="register2.html"><ion-icon name="person-add"></ion-icon></a></div></center><br>
+    <br>
+    <center><b style="font-size: 20px">------OR------</b><br></center><br><br>
+   <center><p style="font-size:25px"> Login </p><div class="icons2"><a href="login2.html"><ion-icon name="log-in"></ion-icon></a></div></center><br>
+    
+  </div>
+
+  <center><p  style="font-size:25px"  >Follow us at</p></center>
+  <hr style="width:40%"><br>
+  <div class="icons">
+    <center><a href="http://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="http://www.google.com"><ion-icon name="logo-google"></ion-icon></a>
+       <a href="https://www.instagram.com/damaged_rtk/"><ion-icon name="logo-instagram"></ion-icon></a>
+       <a href="http://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+     
+    </center>
+   </div><br><br>
+  
+  
+<div class="container" style="background-color:#f1f1f1">
+</div>
+  
+ <footer>
+  
+ Copyright&#169; 2021-2022 Online Voting System.(OVS)<br>
+All Rights Reserved. 
+</footer> 
+  
+  
+  
+</form>
+</div>
+  
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

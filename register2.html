@@ -1,0 +1,446 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!DOCTYPE html>
+<html>
+<title>OVS-Register</title>
+<link rel="icon" href="vot.jpg" type="image/x-icon">
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style>
+
+body{
+ font-style: Arial(sans-serif); 
+}
+
+/* Full-width input fields */
+
+input[type=text],[type=tel],[type=password],
+[type=number],[type=file],[type=email]{
+    width: 40%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    font-size: 22px;
+   border-radius: 20px;
+}
+
+
+.psw{
+ position: relative;
+  left: 110px;
+  padding: 20px 20px;
+  width: 40%;
+  border: 2px solid #000000;
+    display: inline-block;
+  box-sizing: border-box;
+}
+
+
+.ps{
+  position: relative;
+  left: 110px;
+  font-size: 30px;
+}
+
+
+
+.ps1{
+  font-size: 30px;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #00008b;
+    color: #ffffff;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border-radius: 35px;
+    cursor: pointer;
+    width: 40%;
+  font-size:30px;
+}
+
+/* Center the image and position
+the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding-top: 10px;
+    padding-left:110px;
+    padding-right: 110px;
+}
+
+.containerfoot{
+  padding: 20px;
+}
+
+
+
+
+.container label{
+  position: absolute;
+ padding-left: 20px;
+  font-size: 25px;
+}
+
+.container label2{
+  position: absolute;
+ padding-left: 450px;
+  font-size: 25px;
+}
+
+
+
+
+
+
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: auto;
+    height:auto;
+}
+
+body{
+    background-image: url(images/wal.jpg);
+   background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    
+}
+
+.menu:hover,
+.menu:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+.menu2 img{
+    position: absolute;
+    top: 0;
+    right:2px;
+    width: 60px;
+  border: 2px solid black;
+}
+
+
+
+
+/* Add Zoom Animation */ 
+
+/* Change styles for span and cancel
+button on extra small screens */ 
+
+@media screen and(max-width: 300px){
+    span.password {
+       display: block;
+       float: none;
+    }
+}
+
+
+
+ .dropbox{
+position: relative;
+left: 290px;
+padding: 20px;
+width: 14%;
+background-color: #000000;
+color: white;
+ border-radius: 25px;
+ font-size: 20px;  
+ }
+
+
+
+ .dropbox2{
+position: relative;
+left: 400px;
+padding: 20px;
+width: 14%;
+background-color: #000000;
+color: white;
+ border-radius: 25px;
+   font-size: 20px;
+}
+
+
+
+.icons ion-icon{
+   color: black;
+    font-size: 50px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    }
+  
+  .icons ion-icon:hover{
+    color: #48d1cc;
+  }
+
+
+.usr ion-icon{
+    font-size: 120px;
+}
+
+
+
+
+
+
+.icons2 ion-icon{
+   color: black;
+  font-size: 50px;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:15px;    
+}
+
+
+/* menu */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  border: 2px solid black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+</style>
+
+<body>
+
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+   <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+    <a href="contactus.html"><ion-icon name="mail"></ion-icon>  ->  Contact us</a>
+<a href="forgot.html"><ion-icon name="reload-circle"></ion-icon>  ->  Restore password</a>
+</div>  
+  
+  
+  
+  
+  
+
+<form action="phpregister2.php" method="POST" enctype="multipart/form-data">
+
+<div class="imgcontainer">
+<div class="menu">
+ 
+  <span style="font-size:30px;cursor:
+  pointer;border:3px solid white;border-radius:7px; padding:10px;
+    margin:30px; "onclick="openNav()">☰
+    </span>
+
+  
+  <script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+    </script>
+</div>
+ 
+ <div class="menu2">
+   <a href="hindex2.html"><img src="vot.jpg"></a>
+ </div>  
+
+ <div class="usr">  <ion-icon name="person-circle-outline"></ion-icon></div>
+ <alt="Avatar" class="avatar">
+</div>
+
+
+<div class="container">
+<center><h2>Register</h2></center>
+ <hr style="width:40%"><br><br>
+
+  
+  <!---------INPUT FIELDS-------> 
+  
+<label><b>Name</b></label>  <label2><b>Mobile</b></label2><br><br>
+<ion-icon class="ps1" name="person"></ion-icon>
+<input type="text" placeholder= "Enter your name" name="name" required="required">
+<ion-icon class="ps" name="phone-portrait"></ion-icon>
+<input class="psw" type="tel" placeholder= "Enter mobile number" pattern="^\d{10}$" name="mobile" required="required"><br><br><br>
+  
+   
+
+<label><b>E-mail</b></label>  <label2><b>Address</b></label2><br><br>
+<ion-icon class="ps1" name="mail"></ion-icon>
+<input type="email" placeholder= "Enter email" name="email" required="required">
+<ion-icon class="ps" name="location"></ion-icon>
+<input class="psw" type="text" placeholder= "Enter address" name="address" required="required"><br><br><br>
+  
+
+<label><b>Password</b></label>  <label2><b>Confirm Password</b></label2><br><br>  
+<ion-icon class="ps1" name="lock-closed"></ion-icon>
+<input type="password" placeholder= "Enter password" name="password" required="required">
+<ion-icon class="ps" name="lock-closed"></ion-icon>
+<input class="psw" type="password" placeholder= "Confirm Password" name="cpassword" required="required"><br><br><br>
+  
+
+<label><b>Age</b></label>  <label2><b>Upload image</b></label2><br><br> 
+<ion-icon class="ps1" name="calendar"></ion-icon>
+<input type="number" min="18" value="18" placeholder= "Enter age" name="age" required="required">
+<ion-icon class="ps" name="cloud-upload-sharp"></ion-icon>
+<input  class="psw" type="file" name="photo" placeholder="choose file" required="required">
+</div> 
+  
+  <br><br><br>
+
+  
+  
+  
+<select class="dropbox" name="role">
+     <option value="1">Voter</option>
+     <option value="2">Group</option>
+</select>
+<select class="dropbox2" name="gender">
+     <option value="Male">Male</option>
+     <option value="Female">Female</option>
+     <option value="Transgender">Transgender</option>
+</select>
+  
+  
+  <br><br><br><br>
+  
+  
+  <center><div class="g-recaptcha" data-sitekey="6LeD3hEUAAAAAKne6ua3iVmspK3AdilgB6dcjST0" required="required"></div></center>
+<br><br>
+  
+
+<center><button type="submit">REGISTER</button></center>
+<br><br><br>
+  
+  
+  <!---------AFTER REGISTER BUTTON------->
+  
+  <center><p style="font-size:25px">Already a user! Login here</p><br><div class="icons2"><a href="login2.html"><ion-icon name="log-in"></ion-icon></a></div></center><br>
+</div>
+
+  <center><p  style="font-size:25px">Follow us at</p></center>
+  <hr style="width:40%"><br>
+  <div class="icons">
+    <center><a href="http://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="http://www.google.com"><ion-icon name="logo-google"></ion-icon></a>
+       <a href="https://www.instagram.com/damaged_rtk/"><ion-icon name="logo-instagram"></ion-icon></a>
+       <a href="http://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+     
+    </center>
+   </div><br><br>
+  
+  
+  
+ <!--------------FOOTER------------->
+    
+<div class="containerfoot" style="background-color:#f1f1f1">
+</div>
+  
+ <footer>
+  
+ Copyright&#169; 2021-2022 Online Voting System.(OVS)<br>
+All Rights Reserved. 
+</footer> 
+  
+  
+  
+</form>
+</div>
+
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
+

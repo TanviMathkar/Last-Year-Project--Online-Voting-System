@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OVS About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<style>
+
+
+
+
+
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400&display=swap')
+*{
+  margin:0px;
+padding:0px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+
+.section{
+  width:100%;
+}
+
+.section .container{
+  width:80%;
+  display: block;
+  margin:0px auto;
+  padding:50px 0px;
+}
+  
+.container .title{
+  width:100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container .title h1{
+  text-transform: uppercase;
+  font-size: 35px;
+  color: black;
+  padding-top: 10px;
+}
+
+
+.content{
+  float:left; 
+  width:55%;
+}
+
+.image-section{
+  float:right;
+  width:40%;
+}
+
+.image-section img{
+  width:100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.content .article h3{
+  color:#a3a3a3;
+  font-size: 17px;
+}
+
+
+.content .article p{
+  margin-top:20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+
+.content .article .button{
+  margin-top: 90px;
+}
+
+.content .article .button a{
+  text-decoration: none;
+  padding:8px 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  color:#88941e ;
+  font-size: 18px;
+  border:5px solid #88941e;
+  Letter-spacing: 1.5px;
+}
+
+
+.content .article .button a:hover{
+  background-color: #88941e;
+  color:#fff;
+  transition: 1s ease;
+}
+
+
+.container .social i{
+  color:#3498db;
+  font-size: 22px;
+  height: 45px;
+  width:45px;
+  border-radius: 50%;
+  Line-height: 45px;
+  text-align: center; 
+  background-color: #grey;
+  margin-top: 25px;
+  border: 1px solid black;
+}
+
+.container .social i:hover{
+  color:#fff;
+  background-color: #88941e;
+  transition: 1s ease;
+  transform: rotate(360deg);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+.section .container {
+  width: 80%;
+  display: block; 
+  margin: auto;
+}
+
+.content{
+  float:none;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+.image-section{
+  float: none;
+  width:100%;
+  margin-top: 50px;
+}
+
+  .image-section img{
+  width:100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+  
+  .container .title h1{
+text-align: center;
+font-size: 30px;
+}
+
+.container .article .button{ 
+  text-align: center;
+}
+
+.container .article .button a{ 
+  padding:6px 15px; 
+  font-size: 16px;
+}
+
+.container .social i{
+  font-size: 30px;
+  height: 35px;
+  width:35px;
+  Line-height: 35px;
+  
+}
+
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  border: 2px solid black;
+}
+
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:15px;
+  margin-top: 500px;
+}
+
+
+
+</style>
+<body>
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+  <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+  <a href="contactus.html"><ion-icon name="mail"></ion-icon>  ->  Contact us</a>
+  <a href="forgot.html"><ion-icon name="reload-circle"></ion-icon>  ->  Restore password</a>
+</div>
+  
+<span style="font-size:30px; color:steelblue; border:3px solid steelblue;border-radius: 7px;
+  cursor:pointer;"onclick="openNav()">☰ 
+</span> <b style="color:steelblue;font-size:20px"> <marquee><center>ONLINE VOTING SYSTEM</center> </b></marquee>
+  
+  <hr style="height:2px;width:100%;background-color:steelblue">
+
+  <script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+</script>  
+  
+  
+  
+  
+  <div class="section">
+  <div class="container">
+
+<div class="title">
+  <u><h1>About Us</h1></u>
+</div>
+
+<div class="content">
+  <div class="article">
+  <h3>
+    India is a Socialist, Secular, Democratic Republic and the largest democracy 
+    in the World. The modern Indian nation state came into existence on 15th
+    of August 1947. Since then free and fair elections have been held at
+    regular intervals as per the principles enshrined in the Constitution,
+    Electoral Laws and System.
+
+The Constitution of India has vested in the Election Commission of India the
+    superintendence,direction and control of the entire process for conduct
+    of elections to Parliament and Legislature of every State and to the offices
+    of President and Vice-President of India.
+  </h3>
+    
+    <p>
+      An online voting system is a software platform
+    that allows groups to securely conduct votes and 
+    elections. High-quality online voting systems balance
+    ballot ballot security, accessibility, and the overall 
+    requirements of an organization`s voting event.
+      
+      
+    online voting systems protect the integrity 
+    of your vote by preventing voters from being 
+    able to vote multiple times. As a digital platform,
+    they eliminate the need to gather in-person, 
+    cast votes using paper, or by any other means 
+    (e.g. email, insecure survey software). 
+  </p>
+    
+    <div class="button">
+      <a href="#">Read more</a>  
+      <br><br>
+    </div>    
+    
+  </div>
+</div>
+      
+      <div class="image-section">
+        <img src="vot.jpg">
+      </div>    
+    <br><br><br><br>
+    
+    <center><p style="font-size:25px">Follow us at</p></center>
+  <hr style="width:40%">
+    
+      <div class="social">
+        <center>  <a href=""><i class="fab fa-facebook-f"></i></a>   
+      <a href=""><i class="fab fa-twitter"></i></a>   
+      <a href=""><i class="fab fa-instagram"></i></a>   
+      <a href=""><i class="fab fa-google"></i></a></center>
+      </div>
+    
+    </div>
+</div>
+  
+  
+  <br>
+ <footer>
+   Copyright&#169; 2021-2022 Online Voting System.(OVS)<br>
+All Rights Reserved. 
+</footer>   
+  
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  
+</body>
+</html>

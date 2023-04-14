@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>About Us</title>
+<meta charset="utf-8">
+<style>
+  
+  
+ *{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+  body{
+      background-image: url(images/vote.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  }
+    
+  
+  
+.logo img{
+ position: absolute;
+ margin-top: 2px;
+ margin-left:880px;
+}
+  
+  
+  
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+  
+  
+  
+   
+  
+  .section{
+  width: 263%;
+  margin-top: 40px;
+  min-height: 100vh;
+    height: 200%;
+  background-color: #ddd;  
+  
+    
+}
+
+.container {
+  width: 80%; 
+  display: block; 
+  margin: auto; 
+  padding-top: 100px;
+}
+
+
+.content-section{
+  float:left;
+  width: 500%;
+}
+
+.image-section{
+  float: left;
+  width:50%
+}
+
+
+.image-section img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+
+.content-section .title{ 
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+
+.content-section .content h3{
+  margin-top: 20px;
+  color: #5d5d5d;
+  font-size: 19px;
+} 
+
+.content-section .content p{
+  margin-top: 10px;
+  font-family: sans-serif;
+  Line-height: 1.5;
+  font-size: 18px;
+}
+
+
+.button{
+  margin-top: 60px;
+}
+
+.button .btn1{
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    background: none;
+    font-size: 20px; 
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.7px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+    .button .btn1:hover{
+    color: #fff;
+  }
+  
+  
+.social {
+  margin: 40px 40px;
+  font-size: 30px;
+  
+}
+
+
+.social .i{
+  color:#3498db;
+  font-size: 40px; 
+  padding:0px 10px;
+}
+
+
+.social .i:hover {
+  color:#3d3d3d;
+}
+
+@media screen and (max-width: 450px){ 
+  .container {
+    width: 80%;
+    display: block; 
+    margin: auto;
+    padding-top: 50px;
+  } 
+  
+  .content-section{
+  float: none; 
+  width:100%;
+  display: block;
+  margin: auto;
+}
+} 
+  
+  
+</style>
+</head>
+<body>
+
+  
+ 
+  
+  
+ <div class="logo"><a href="index.html"><img src="images/vot.jpg" width="70" height="70"></a>
+    </div>
+
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+  <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+  <a href="contactus.html"><ion-icon name="mail"></ion-icon>  ->  Contact us</a>
+
+  
+</div>
+  
+<span style="font-size:30px;cursor:
+  pointer"onclick="openNav()">☰ Menu
+  </span>
+
+<script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+</script>  
+  
+    
+  
+   
+
+<div class="section">
+
+<div class="container">
+
+<div class="content-section">
+
+<div class="title">
+<h1>About Us</h1>
+</div>
+
+<div class="content">
+  <h3>Welcome to our page. Its a lovely day to enjoy</h3>  
+  <p>Voting System is an online process of voting, where you just
+    have to login, if you are registered. It was made by made by 
+    RITIK KUMAR UPADHYAY and Tanvi Mathkar and was wonderful to use , as it gets
+  a good response from the user.</p>
+</div>
+
+<div class="button">
+<button class="btn btn1">Read more</button>
+</div>
+</div> 
+  
+<div class="social">
+<ion-icon name="logo-facebook" class="i"></ion-icon>
+<ion-icon name="logo-google" class="i"></ion-icon>
+<ion-icon name="logo-instagram" class="i"></ion-icon>
+<ion-icon name="logo-twitter" class="i"></ion-icon>
+<ion-icon name="logo-pinterest" class="i"></ion-icon> 
+</div>
+</div>
+  
+<div class="image-section">
+
+</div>  
+
+</div>
+
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script 
+</body>
+</html>

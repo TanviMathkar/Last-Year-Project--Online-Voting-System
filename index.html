@@ -1,0 +1,717 @@
+<DOCTYPE! html>
+<html>
+<head> 
+<meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+<title>Online Voting System</title>
+<style> 
+  
+ *{
+  padding: auto;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/wal.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+  
+ 
+  
+  
+ .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+   border: 2px solid black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+  
+
+nav img{
+  width: 55px;
+  border: 2px solid black;
+}
+
+  text-box{
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+.text-box h1{
+  font-size: 62px;
+  text-align: center;
+  color: #fff;
+}
+.text-box p{
+ margin: 10px 0px 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  padding: 12px 34px;
+  font-size: 13px;
+  position: relative;
+  cursor: pointer;
+  background: white;
+}
+.hero-btn:hover{
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 0.5;
+}
+nav .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 20px;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    background: black;
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa{
+  display: none;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding: 30px;
+  }
+}
+
+
+/* ----vidvote---- */
+
+.vidvote{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+p{
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.vid-col{
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  width: auto;
+  height: auto;
+}
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+  p{
+   color: black; 
+  }
+.vid-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+@media(max-width: 700px){
+  .row{
+   flex-direction: column; 
+  }
+}
+.rights{
+  width:80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.rights-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.rights-col img{
+  width: 100%;
+  display: block;
+}
+.layer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover{
+  background: rgba(220,0,0,0.7);
+}
+.l/ayer h3{
+  width: 100%;
+  font-weight: 500;
+  font-size: 26px;
+  color: #fff;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.l/ayer h3:hover{
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*---------TESTIMONY----------*/
+
+  .testimony{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.testimony-col{
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  background: #fff3f3;
+}
+.testimony-col img{
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.testimony-col p{
+  padding: 0;
+  color: black;
+}
+.testimony-col h3{
+ margin-top: 15px;
+  text-align: left;
+}
+
+
+  @media(max-width: 700px){
+  .testimony-col img{
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+/*---------CONTACT--------*/
+
+.con{
+ margin: 100px auto;
+  padding: 100px 0;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/scr.jpg);
+background-position: center;
+  background-size: cover;
+}
+.con h1{
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+@media(max-width: 700px){
+  .con h1{
+    font-size: 24px;
+    
+  }
+}
+
+/*------FOOTER------*/
+
+ footer {
+width: 100%;
+position: absolute;
+bottom: 0;
+background: linear-gradient(to right, #00093c, #2d0b00);
+color: #fff;
+padding: 100px 0 30px;
+border-top-left-radius: 125px;
+font-size: 13px;
+line-height: 20px;
+}
+  
+  
+.row{
+width: 85%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+align-items:flex-start;
+justify-content: space-between;
+}
+
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+} 
+  
+ .email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+form .ion{
+  font-size: 25px; 
+  margin-right: 10px;
+}
+
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+} 
+  
+form button .oin{
+  font-size:20px;
+  color: #ccc;  
+}
+
+.social-icons{
+  width: 200px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+  
+  .social-icons:hover{
+    color: orangered;
+  }
+
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright{
+  text-align: center;
+}
+
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+ 
+ .underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+  
+  0%{
+  left: -20px;
+  }
+  100%{
+  left: 100%;
+  }
+}
+
+ 
+@media (max-width: 900px){
+  footer {
+  bottom: unset;
+}
+
+.col{
+  flex-basis: 25%;
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+  flex-basis: 15%;
+}
+}
+  
+  
+  
+
+  
+</style>  
+</head>
+<body>
+
+
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+
+  <a href="index.html"><ion-icon name="home"></ion-icon>  ->  Home</a>
+  <a href="login2.html"><ion-icon name="log-in"></ion-icon>  ->  Login</a>
+  <a href="register2.html"><ion-icon name="person-add"></ion-icon>  ->  Register</a>
+  <a href="about.html"><ion-icon name="alert-circle"></ion-icon>  ->  About us</a>
+  <a href="contactus.html"><ion-icon name="mail"></ion-icon>  ->  Contact us</a>
+<a href="forgot.html"><ion-icon name="reload-circle"></ion-icon>  ->  Restore password</a>
+
+  
+  
+</div>
+  
+
+ <span style="font-size:30px;color:white;border-radius:7px;border:3px solid white;
+  cursor:pointer"onclick="openNav()">☰ 
+</span> <b style="color:steelblue;font-size:20px"> <marquee> <center><h1>ONLINE VOTING SYSTEM</h1></center></b></marquee>
+  
+  <hr style="height:2px;width:100%;background-color:steelblue">
+ 
+  
+<script>
+
+/* Set the width of the side navigation to
+250px */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="375px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+</script>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<section class="header">
+  
+  <nav>
+<a href="index.html"><img src="images/vot.jpg"></a>
+</nav>
+  
+<div class="text-box">
+<h1>Online Voting System</h1>
+<p>RTK welcome to this beautiful world of mine.
+</p>
+  <center><a href="about.html" class="hero-btn">Visit us to know more.</a></center>
+</div>
+</section>
+  
+
+  
+<!----------how to vote---------->
+
+<section class="vidvote">
+
+<h1 style="color:white">See the video to know how to vote</h1>
+<p style="color:white">Here you will know how to vote.</p>
+
+<div class="row">
+
+<div class="vid-col">
+<h3>videos</h3>
+  <p>Here you can see variety of videos that how to vote. If you are not getting please go to how to vote stepwise.</p>  
+</div>
+
+<div class="vid-col">
+<h3>Stepwise</h3>
+  <p>Here you can see variety of videos that how to vote. For stepwise simply click.</p>  
+</div>
+
+<div class="vid-col">
+<h3>Or simply fill</h3>
+  <p>Here you can submit your pics of documents to fill your details.</p>  
+</div> 
+  
+</div>
+  
+</section>
+  
+
+
+<!-----------RIGHTS------------->
+   
+<section class="rights">
+<h1  style="color:white" >EVERY VOTE COUNTS</h1>
+<p  style="color:white"  >We the people of India, should know about the rights regarding voting system.</p>
+
+<div class="row">
+
+<div class="rights-col">
+  <img src="images/know.jpg">
+<div class="layer">
+  <a href="https://www.creditmantri.com/voters-rights-in-india/" style="color:black">
+    <h3 style="font-size:35px;margin-top: 60px">Know <br><br>your <br><br>Rights</h3></a>
+</div>
+</div>
+  
+<div class="rights-col">
+<img src="images/votee.jpg">
+<div class="layer">
+<a href="    https://ceo.maharashtra.gov.in/SearchList/" style="color:black">
+  <h3 style="font-size:35px;margin-top: 60px">Download<br><br>Electoral <br><br>PDF</h3></a>
+</div>
+</div>
+    
+<div class="rights-col">
+<img src="images/mask.jpg">
+<div class="layer">
+  <a href="  https://www.verovoting.com.au/blog/benefits-of-online-voting/  " style="color:black">
+<h3  style="font-size:35px;margin-top: 60px"  >Benefits<br><br> of Online<br><br>Voting</h3></a>
+</div>   
+</div>
+  
+</div>  
+</section>
+
+  
+
+<!-------------TESTIMONY------------->
+  
+<section class="testimony">
+<h1 style="color:white">A glimpse at our users</h1>
+<p></p>
+
+<div class="row">
+
+<div class="testimony-col">
+<img src="images/av.png">
+<div>
+<p>This was fun , voting online.</p>
+<h3>Rtk upadhyay</h3>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+</div>
+</div>
+
+<div class="testimony-col">
+<img src="images/avf.jpg">
+<div>
+<p>This was fun , voting online.</p>
+<h3>Tanvi Mathkar</h3>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+<ion-icon name="star" class="ra"></ion-icon>
+ <ion-icon name="star-half" class="ra"></ion-icon> 
+</div>
+</div>
+  
+</div>  
+</section>
+  
+
+  <!---------CONTACT---------->
+  
+<section class="con">
+<h1>Contact us directly</h1>
+<a href="contactus.html" class="hero-btn">Contact us</a>
+</section>
+  
+  
+  <!------------FOOTER----------->
+  
+
+  
+  
+<footer>
+<div class="row">
+
+<div class="col">
+<img src="images/vot.jpg" class="logo">
+
+<p></p>
+</div>
+
+<div class="col">
+<h3>Office<div class="underline"><span></span></div></h3>
+<p style="color:white">Mira-Bhayander</p>
+<p  style="color:white">Thane, Mumbai</p>
+<p  style="color:white">MAHARASHTRA, PIN 401107, India</p>
+<p class="email-id"  style="color:white">rtkupdh2001@gmail.com</p>
+<h4>+91 0123456789</h4>
+</div>
+
+<div class="col">
+<h3>Links<div class="underline"><span></span></div></h3>
+<ul>
+<li><a href="">Home</a></li>
+<li><a href=""> Services</a></li>
+<li><a href="">About Us</a></li>
+<li><a href="">Features</a></li>
+<li><a href=""> Contacts</a></li>
+</ul>
+</div>
+
+<div class="col">
+<h3>Newsletter<div class="underline"><span></span></div></h3>
+<form>
+<ion-icon name="mail" class="ion"></ion-icon>
+<input type="email" placeholder="Enter your email id" required> <button type="submit"><ion-icon name="arrow-forward" class="oin"></ion-icon></button>
+</form>
+  
+  
+<div class="social-icons">
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-google"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+<ion-icon name="logo-pinterest"></ion-icon>
+</div> 
+  
+</div>
+</div>
+<hr>
+  <p class="copyright" style="color:white">Copyright &#169; 2021-2022 Online Voting System.<br>
+All Rights Reserved.</p>
+</footer>
+
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>   
+</body>
+</html>
+  
+  

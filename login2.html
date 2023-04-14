@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<title>OVS-Login</title>
+<style>
+
+/* Full-width input fields */
+
+input[type=number],
+input[type=password] {
+    width: 60%;
+    padding: 30px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+  font-size: 22px;
+  border-radius: 20px;
+}
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #00008b;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin: 8px 0;
+    border-radius: 35px;
+    cursor: pointer;
+    width: 40%;
+  font-size: 30px
+}
+
+/* Center the image and position
+the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 40px;
+}
+
+.container label{
+  position: absolute;
+ padding-left: 200px;
+  font-size: 25px;
+}
+
+
+
+span.password {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+.modal {
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.5);
+   padding-top:60px;
+  
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: auto;
+    height:auto;
+    background-image: url(images/wal.jpg);
+   background-position: center;
+  background-size: cover;
+  position: relative;
+     
+}
+
+/* The Close Button (x) */
+
+.close ion-icon{
+    position: absolute;
+    left: 25px;
+    top: 0;
+    color: #000000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+.close img{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width:50px;
+  border: 2px solid black;
+}
+
+
+
+
+/* Add Zoom Animation */ 
+
+.animate {
+ -webkit-animation: animatezoom 0.6s;
+ animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+ from {-webkit-transform: scale(0)}
+ to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel
+button on extra small screens */ 
+
+@media screen and(max-width: 300px){
+    span.password {
+       display: block;
+       float: none;
+    }
+}
+
+
+ .dropbox{
+padding: 20px;
+width: 14%;
+background-color: #000000;
+color: white;
+ border-radius: 25px;
+ font-size: 20px;  
+ }
+
+
+.icons ion-icon{
+   color: black;
+    font-size: 50px;
+    padding-left: 40px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    }
+  
+  .icons ion-icon:hover{
+    color: #48d1cc;
+  }
+
+
+.usr ion-icon{
+    font-size: 150px;
+}
+
+.ps1{
+  font-size: 40px
+}
+
+
+
+.icons2 ion-icon{
+   color: black;
+  font-size: 50px;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:25px;  
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+</style>
+
+<body>
+  
+  <div id="id01" class="modal">
+    
+    
+    <form class="modal-content animate" action="phplogin2.php" method="POST">
+
+<div class="imgcontainer">
+<div class="close"> 
+  <a href="index.html"><ion-icon name="home"></ion-icon></a>
+   <a href="index.html"><img src="vot.jpg"></a>
+</div>
+  
+  
+  
+  
+  <div class="usr">  <ion-icon name="person-circle-outline"></ion-icon></div>
+ <alt="Avatar" class="avatar">
+</div>
+
+
+<div class="container">
+<center><h1>Login</h1></center>
+  <hr style="height:2px;width:40%;background-color:black"><br><br><br><br>
+<label><b>Mobile</b></label><br><br>
+  
+  <center>
+  <ion-icon class="ps1" name="phone-portrait"></ion-icon>
+ <input type="number" placeholder= "Enter Mobile" name="mobile" required></center><br><br><br>
+<label><b>Password</b></label><br><br>
+ 
+  <center>
+ <ion-icon class="ps1" name="lock-closed"></ion-icon>
+<input type="password" placeholder= "Enter Password" name="password" required></center><br><br><br>
+  <center><select class="dropbox" name="role">
+     <option value="1">Voter</option>
+     <option value="2">Group</option>
+</select><br><br><br>
+    
+    <button type="submit">LOGIN</button></center><br><br>
+
+  
+  
+  
+  <inpput type="checkbox" checked="checked"><br><br><br>
+  
+  
+  
+  <center><p style="font-size: 25px">New user! Register here</p><div class="icons2"><a href="register2.html"><ion-icon name="person-add"></ion-icon></a></div></center><br>
+</div>
+
+  <center><p style="font-size:25px">Follow us at</p></center>
+   <hr style="height:2px;width:40%;background-color:black"><br>
+  <div class="icons">
+    <center><a href="http://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="http://www.google.com"><ion-icon name="logo-google"></ion-icon></a>
+       <a href="https://www.instagram.com/damaged_rtk/"><ion-icon name="logo-instagram"></ion-icon></a>
+       <a href="http://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+     
+    </center>
+   </div><br><br>
+  
+  
+<div class="container" style="background-color:#f1f1f1">
+</div>
+  
+ <footer>
+  
+ Copyright&#169; 2021-2022 Online Voting System.(OVS)<br>
+All Rights Reserved. 
+</footer> 
+  
+  
+  
+</form>
+</div>
+  
+<script src="http://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
